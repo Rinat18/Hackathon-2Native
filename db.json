@@ -1,6 +1,36 @@
 {
-  "users": [],
-  "login": [],
+  "users": [
+    {
+      "name": "rinat",
+      "email": "molniymakvin",
+      "password": "123",
+      "isAdmin": true,
+      "id": 1
+    },
+    {
+      "name": "qwe",
+      "email": "qwe",
+      "password": "qwe",
+      "isAdmin": false,
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "name": "rinat",
+      "email": "molniymakvin",
+      "password": "123",
+      "isAdmin": true,
+      "id": 1
+    },
+    {
+      "name": "qwe",
+      "email": "qwe",
+      "password": "qwe",
+      "isAdmin": false,
+      "id": 2
+    }
+  ],
   "cards": [],
   "pizzas": [
     {
@@ -9,12 +39,13 @@
       "desc": "Донерное мясо из говядины, моцарелла, томаты, красный лук, соленые огурчики, соус ранч, томатный соус",
       "price": 475,
       "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/105e96ce9c654f3caa6dd3c12b730d83_584x584.webp"
+      
     },
     {
       "id": 2,
       "name": "Пицца из половинок",
       "desc": "Соберите свою пиццу 35 см с двумя разными вкусами",
-      "price": 290,
+      "price": "290",
       "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_584x584.webp"
     },
     {
@@ -86,13 +117,6 @@
       "desc": "Цыпленок, моцарелла, смесь сыров чеддер и пармезан, томаты, чеснок сухой, сырный соус, соус альфредо",
       "price": 475,
       "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/4c7751e9fb5047a49cb016f8842b3714_584x584.webp"
-    },
-    {
-      "name": "8967",
-      "desk": "7678",
-      "img": "\thttps://dodopizza-a.akamaihd.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_584x584.webp",
-      "price": "pizzas",
-      "id": 13
     }
   ],
   "kombo": [

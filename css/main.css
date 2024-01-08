@@ -126,9 +126,20 @@ header > .container {
   border: none;
   border-radius: 20px;
 }
+.Section1DodoAuth {
+  height: 32px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
 .registration-modal {
   display: none;
   position: fixed;
+  z-index: 999999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -199,4 +210,292 @@ header > .container {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
+}
+
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-modal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-modal input {
+  width: 93%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-modal button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-modal button:hover {
+  background-color: #45a049;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.card .cardPizza {
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  cursor: pointer;
+  width: 292px;
+  margin-right: 32px;
+}
+
+.card .imgPizza {
+  margin: 0px;
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  top: 0px;
+  transition: top 150ms ease-out 0s;
+}
+
+.card .name {
+  margin: 8px 0px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.card .desc {
+  font-size: 16px;
+  color: #727272;
+}
+
+.card .cardPrices {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.card .price {
+  flex: 0 1 auto;
+  padding-right: 4px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  line-height: 22px;
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.card .btnChoose {
+  height: auto;
+  min-height: 40px;
+  max-width: 60%;
+  min-width: 120px;
+  overflow-wrap: normal;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgb(255, 240, 230);
+  color: rgb(209, 87, 0);
+  outline: none;
+  border: none;
+  border-radius: 9999px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .btnDelete {
+  min-height: 40px;
+  max-width: 60%;
+  min-width: 100px;
+  overflow-wrap: normal;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgb(255, 240, 230);
+  color: rgb(209, 87, 0);
+  outline: none;
+  border: none;
+  border-radius: 9999px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pizza h2 {
+  font-size: 58px;
+}
+#outerContainer {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2% 10px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.searchAndFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filterBlock {
+  margin-bottom: 10px;
+}
+
+.filterBlock p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cards-price-range-container {
+  display: flex;
+  align-items: center;
+}
+
+.cards-price-range-container input {
+  width: 20%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cards-price-range-container span {
+  margin: 0 5px;
+}
+
+.cards-price-range-container button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.cards-price-range-container button:hover {
+  background-color: #45a049;
+}
+
+.liveSearchBlock {
+  margin-bottom: 10px;
+}
+
+.liveSearchBlock p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.search--input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Стили для модального окна */
+.info {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.none{
+  display: block;
+}
+
+@media screen and (max-width: 425px)  {
+  .section1InformationLeft{
+    flex-direction: column;
+    align-items: start;
+  }
+  .section1ContactDodo{
+    display: flex;
+    flex: start;
+    flex-direction: column;
+  }
+  .section1DodoOrder{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .section1ContactDodo{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .searchAndFilter{
+    flex-direction: column;
+  }
+  .cards-price-range-container{
+    justify-content: center;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
+  }
+  .card .cardPizza{
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .pizza{
+    display: flex;
+    justify-content: center;
+  }
 }
