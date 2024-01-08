@@ -434,7 +434,6 @@ header > .container {
   border-radius: 4px;
 }
 
-/* Стили для модального окна */
 .info {
   display: none;
   position: fixed;
@@ -445,9 +444,8 @@ header > .container {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000; 
+  z-index: 1000;
 }
-
 
 .close {
   position: absolute;
@@ -457,44 +455,82 @@ header > .container {
   cursor: pointer;
 }
 
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
 
-.none{
+.infoCard:hover {
+  transform: scale(1.05);
+}
+
+.infoCard .imgPizza {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.infoCard .name,
+.infoCard .desc {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.infoCard .cardPrices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoCard .price {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.none {
   display: block;
 }
 
-@media screen and (max-width: 425px)  {
-  .section1InformationLeft{
+@media screen and (max-width: 425px) {
+  .section1InformationLeft {
     flex-direction: column;
     align-items: start;
   }
-  .section1ContactDodo{
+  .section1ContactDodo {
     display: flex;
     flex: start;
     flex-direction: column;
   }
-  .section1DodoOrder{
+  .section1DodoOrder {
     margin-left: 0;
     margin-top: 20px;
   }
-  .section1ContactDodo{
+  .section1ContactDodo {
     margin-left: 0;
     margin-top: 20px;
   }
-  .searchAndFilter{
+  .searchAndFilter {
     flex-direction: column;
   }
-  .cards-price-range-container{
+  .cards-price-range-container {
     justify-content: center;
   }
-  .card{
+  .card {
     display: flex;
     justify-content: center;
   }
-  .card .cardPizza{
+  .card .cardPizza {
     margin-right: 0;
     margin-top: 30px;
   }
-  .pizza{
+  .pizza {
     display: flex;
     justify-content: center;
   }

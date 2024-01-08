@@ -13,8 +13,8 @@ async function viewCard() {
   data.forEach((elem) => {
     card.innerHTML += `
     <div class="cardPizza">
-      <img src="${elem.img}" alt="" class="imgPizza" />
-      <div class="name"><p>${elem.name}</p></div>
+    <img id="${elem.id}" src="${elem.img}" alt="" class="imgPizza" />
+    <div class="name"><p>${elem.name}</p></div>
       <div class="desc"><p>${elem.desc}</p></div>
       <div class="cardPrices">
         <div class="price">${elem.price} Сом</div>
@@ -103,3 +103,34 @@ liveSearch.addEventListener("input", (e) => {
   });
 });
 
+let info = document.querySelector(".info");
+let infoDetail = document.querySelector(".infoCard");
+
+document.addEventListener("click", (e) => {
+  let id = [...e.target.id];
+  let img = [...e.target.classList];
+  console.log(img);
+  console.log(id[0]);
+
+  if (img == "imgPizza") {
+    info.classList.add("none");
+    fetch(`${APIpizza}/${id[0]}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        infoDetail.innerHTML = `
+        <div class="cardPizza">
+          <img src="${data.img}" alt="" class="imgPizza" />
+          <div class="name"><p>${data.name}</p></div>
+          <div class="desc"><p>${data.desc}</p></div>
+          <div class="cardPrices">
+            <div class="price">${data.price} Сом</div>
+          </div>
+      </div>
+        `;
+      });
+  } else {
+    info.classList.remove("none");
+  }
+});

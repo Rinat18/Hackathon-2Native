@@ -193,16 +193,17 @@ liveSearch.addEventListener("input", (e) => {
 
 // ! DETAL =========
 
-let info = document.querySelector('.info')
-let infoDetail = document.querySelector('.infoCard')
+let info = document.querySelector(".info");
+let infoDetail = document.querySelector(".infoCard");
 
 document.addEventListener("click", (e) => {
   let id = [...e.target.id];
   let img = [...e.target.classList];
   console.log(img);
   console.log(id[0]);
+
   if (img == "imgPizza") {
-    info.classList.add('none')
+    info.classList.add("none");
     fetch(`${APIpizza}/${id[0]}`)
       .then((res) => {
         return res.json();
@@ -215,16 +216,11 @@ document.addEventListener("click", (e) => {
           <div class="desc"><p>${data.desc}</p></div>
           <div class="cardPrices">
             <div class="price">${data.price} Сом</div>
-            <button id="${data.id}" class="btnChoose">Выбрать</button>
           </div>
       </div>
         `;
       });
-      
   } else {
-    info.innerHTML = "";
-  }
-  if(img == 'close'){
-    info.classList.remove('none')
+    info.classList.remove("none");
   }
 });
